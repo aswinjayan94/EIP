@@ -89,8 +89,8 @@ Out[14]:
 
 ### Result of model.evaluate
 
-*score = model3.evaluate(X_test, Y_test, verbose=0)
-print(score)*
+*score = model3.evaluate(X_test, Y_test, verbose=0)*  
+*print(score)*  
 [0.023280380787370086, 0.9944]
 
 
