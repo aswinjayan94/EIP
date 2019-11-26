@@ -1,6 +1,6 @@
-### Week 2 Assignment:
+## Week 2 Assignment:
 
-###### Log of final model:
+### Log of final model:
 
 Train on 60000 samples, validate on 10000 samples
 Epoch 1/20
@@ -87,12 +87,15 @@ Out[14]:
 <keras.callbacks.History at 0x7f05d8e5f128>
 
 
-###### Result of model.evaluate
+### Result of model.evaluate
 
 *score = model3.evaluate(X_test, Y_test, verbose=0)
 print(score)*
 [0.023280380787370086, 0.9944]
 
 
-###### Strategy
+### Strategy
 
+**First step** was to remove the use of bias in each Conv2D layer.
+The **second step** was to see if there was any leeway for reduction of kernels in a few layers - reduced the number of layers in the 4th and 5th conv2D layers (from 16 each to 12 and 14 respectively) without any significant hit to the validation accuracy.
+**Third step -** Since, the max validation accuracy after the second step was less than 99.4%, there was a need to increase the variance of the model. This was done by relaxing the regularization in the model, by removing batch-normalization in final 2 layers.
