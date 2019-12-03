@@ -1,7 +1,8 @@
-** Final Validation Accuracy for base network: **82.49%  
+**Final Validation Accuracy for base network:**
+ 82.49%  
   
-** Model Definition: **  
-
+**Model Definition:**  
+```
 # Define the model
 model7 = Sequential()
 
@@ -73,11 +74,12 @@ model7.add(Flatten())
 
 # Compile the model
 model7.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+```
 
 
+**Log: **
 
-** Log: **
-
+```
 Epoch 1/50
 390/390 [==============================] - 47s 120ms/step - loss: 1.4698 - acc: 0.4576 - val_loss: 1.1835 - val_acc: 0.5827
 Epoch 2/50
@@ -178,3 +180,4 @@ Epoch 49/50
 390/390 [==============================] - 40s 104ms/step - loss: 0.2477 - acc: 0.9102 - val_loss: 0.5918 - val_acc: 0.8379
 Epoch 50/50
 390/390 [==============================] - 41s 104ms/step - loss: 0.2426 - acc: 0.9114 - val_loss: 0.6393 - val_acc: 0.8224
+```
