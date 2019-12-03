@@ -77,7 +77,7 @@ model7.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accu
 ```
 
 
-**Log: **
+**Log:**  
 
 ```
 Epoch 1/50
